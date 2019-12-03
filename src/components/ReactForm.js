@@ -123,7 +123,7 @@ class ReactForm extends Component {
 
                服务方向:   
                     {
-                        // 注意this指向
+                        // 注意this指向 测试
                         this.state.hobby.map((value,key)=>{
 
                             return (
