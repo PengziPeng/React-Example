@@ -144,6 +144,7 @@ class ReactForm extends Component {
                   <br /><br />
 
                  <input type="submit" align="center" Value=" 刚刚注册"/>
+                 {/* 同步测试 */}
                  
 
                   <br /><br /> <br /><br />
