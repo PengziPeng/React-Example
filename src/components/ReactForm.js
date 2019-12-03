@@ -143,7 +143,7 @@ class ReactForm extends Component {
 
                   <br /><br />
 
-                 <input type="submit" align="center" Value=" 注册"/>
+                 <input type="submit" align="center" Value=" 刚刚注册"/>
                  
 
                   <br /><br /> <br /><br />
