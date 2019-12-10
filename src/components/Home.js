@@ -26,18 +26,32 @@ class Home extends Component {
 
         <div  align="center">
   
-<div class="font4">
+<div class="font4"  >
+  <br/>
 <p>
-<i>跑腿网欢迎你</i>
+<i>跑腿网欢迎你
+ 
+</i>
+</p>
+<br /><br /><br />
+<hr/>
+<br />
+<br /><br /><br />
+<div class="font3">
+<p>
+<i>进入</i>
 </p>
 </div>
 
-            
+
+</div    >
+
    
               <br />
+            
 
         </div>
-        
+         
         
       );
     }

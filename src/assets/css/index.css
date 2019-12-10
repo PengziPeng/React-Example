@@ -2,9 +2,16 @@
   width: 458px;border: rgb(173, 29, 29) solid 1px;
   margin: 10px auto;
   position: relative;
+  background-color: cornflowerblue;
+  
   
 }
 .font4 > p {
   font-size: 40px;
   text-shadow: 5px 5px 5px black, 0px 0px 2px red, 2px 2px 3px green;
   }
+  .font3 > p {
+    font-size: 40px;
+    text-shadow: 5px 5px 5px black, 0px 0px 2px black; 
+    color: white;
+    }

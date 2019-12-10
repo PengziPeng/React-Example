@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '..//assets/css/index.css'
+import {link} from 'react-router-dom';
 
 
 class ReactForm extends Component {
@@ -8,7 +9,7 @@ class ReactForm extends Component {
         this.state = {  
 
             msg:"欢迎注册跑腿网",
-            name:'填真实姓名',  
+           
             sex:'1',     
             city:'',      
             citys:[ 
@@ -87,14 +88,18 @@ class ReactForm extends Component {
     }
     render() {
         return (
- <div class="loginBox">
+ <div class="loginBox"   style={{
+     height :400,
+     backgroundImage: "url(" + require("../assets/image/2.jpg")+")"
+ }}
+ >
             <div align="center" >
 
                 <h2>{this.state.msg}</h2>
 
                 <form onSubmit={this.handelSubmit}>
 
-                  姓名 :  <input type="text" value={this.state.name}  onChange={this.handelName}/> <br /><br />
+                  姓名 :  <input type="text" placeholder="真实姓名"  onChange={this.handelName}/> <br /><br />
 
                 学号： <input type="text" value={this.state.ID}  onChange={this.handelID}/> <br /><br />
 
@@ -144,6 +149,7 @@ class ReactForm extends Component {
                   <br /><br />
 
                  <input type="submit" align="center" Value=" 刚刚注册"/>
+                 
                  {/* 同步测试 */}
                  
 
