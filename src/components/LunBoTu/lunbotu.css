@@ -1,0 +1,65 @@
+*{
+    top: -40px;
+    left: -50px;
+    width: 800px;
+    height: 650px;
+}
+.warp{
+    margin-top:0px;
+    left: -150px; 
+    width: 70px;
+    position: relative;
+    border: 1px solid #000000;
+    overflow: hidden;
+    box-shadow: 0 5px 0px rgb(0, 0, 0);
+}
+.broadcast{
+    top: -30px; 
+    width: 800px;
+    height: 920px;
+    position: relative;
+    overflow: hidden;
+    margin:0 auto;
+}
+.broadcast ul{
+    width: 400%;
+    height: 900px;
+    left: 0;
+    top: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+.broadcast li{
+    left: 0;
+    float: left;
+    list-style: none;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+}
+.broadcast img{
+    width: 800px;
+    height: 900px;
+    
+}
+.broadcast ol{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.broadcast ol li{
+    
+}
+.broadcast ol li.first-li{
+background-color:rgba(248, 248, 248, 0.45)
+}
+.divbox{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.img_list{
+    width: 700px;
+    height: 900px;
+    left: -200px;
+    overflow-y: hidden;
+
+}

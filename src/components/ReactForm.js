@@ -1,91 +1,74 @@
 import React, { Component } from 'react';
 import '..//assets/css/index.css'
-import {link} from 'react-router-dom';
+
+import  { Input,Button,message,script} from 'antd';
 
 
 class ReactForm extends Component {
     constructor(props) {
         super(props);
-        this.state = {  
-
-            msg:"欢迎注册跑腿网",
-           
-            sex:'1',     
-            city:'',      
-            citys:[ 
-                
-                '一栋','二栋','三栋','四栋','校外男一','校外男二'            
-            ],
-            hobby:[   
-                {  
-                    'title':"取快递",
-                    'checked':false
-                },
-                {  
-                    'title':"带外卖",
-                    'checked':false
-                },
-                {  
-                    'title':"其他(联系管理员)",
-                    'checked':true
-                }
-            ],
-            info:' 选填'   
-
-        };
-
-        this.handleInfo=this.handleInfo.bind(this);
+        this.state = {}
     }
-    handelSubmit=(e)=>{
-            //阻止submit的提交事件
 
-            e.preventDefault();
+
+    changeValue=(e)=>{
+        this.setState(
+            {
+                [e.target.name]:e.target.value
+            }
+        )}
+        Upload = () =>{
+               //xhr
+            var xhr = new XMLHttpRequest()
+            var data={
+                "username":this.state.username,
+                "password":this.state.password,
+                "gender":this.state.gender,
+                "age":this.state.age,
+                "address":this.state.address,
+
+
+        }
+        
+            //open连接
+            xhr.open("post","/user/register")
+            //配件响应函数
+            xhr.onreadystatechange=function () {
+                    if(xhr.readyState==4){
+                                if(xhr.status==200){
+                                       
+                                        console.log(xhr.responseText)
+                               var result = JSON.parse( xhr.responseText)
+                                        if(result.state==2
+
+                                 ){message.info("用户名已存在")
+
+                                 }else if(result.state==1){message.info("注册成功")
+
+                                 }  
+                                    }else{
+                                    message.info(xhr.status)
+                                }
+                    }
+            }
+            //发送数据
+            xhr.setRequestHeader('content-type','application/json');
+            xhr.send(JSON.stringify(data))
+
+            //fetch
+
+		
+	
             
-            console.log(this.state.name,this.state.sex,this.state.city,this.state.hobby,this.state.info);
 
-    }
-    handelName=(e)=>{
-        this.setState({
+        }
 
-            name:e.target.value
-        })
-    }
-
-    handelSex=(e)=>{
-
-        this.setState({
-
-            sex:e.target.value
-        })
-    }
-
-    handelCity=(e)=>{
-        this.setState({
-
-            city:e.target.value
-        })
-
-    }
-    handelHobby=(key)=>{
+    
 
 
-        var hobby=this.state.hobby;
 
-        hobby[key].checked=!hobby[key].checked;
 
-        this.setState({
 
-            hobby:hobby
-        })
-    }
-
-    handleInfo(e){
-
-        this.setState({
-
-            info:e.target.value
-        })
-    }
     render() {
         return (
  <div class="loginBox"   style={{
@@ -95,72 +78,33 @@ class ReactForm extends Component {
  >
             <div align="center" >
 
-                <h2>{this.state.msg}</h2>
 
-                <form onSubmit={this.handelSubmit}>
+                 用户名: 
+                  <Input type="text" placeholder="填真实姓名" name="username" id="username" value={this.state.username} onChange={e=>this.changeValue(e)}/> <br /><br />
+                密码:
+                <Input type="password" name="password" id="password" value={this.state.password} onChange={e=>this.changeValue(e)}></Input><br /><br />
+                性别：
+                <Input type="gender"  name="gender" value={this.state.gender} onChange={e=>this.changeValue(e)}></Input><br /><br />
+                真实姓名：
+                <Input type="name" name="name" value={this.state.name} onChange={e=>this.changeValue(e)}></Input><br /><br />
+                {/* 服务方向：
+                <Input type="direction" name="direction" value={this.state.direction} onChange={e=>this.changeValue(e)}></Input><br /><br /> */}
+                年龄
+                <Input type="age" name="age" value={this.state.age} onChange={e=>this.changeValue(e)}></Input><br /><br />
+                <Button onClick={this.Upload} >注册</Button>
 
-                  姓名 :  <input type="text" placeholder="真实姓名"  onChange={this.handelName}/> <br /><br />
-
-                学号： <input type="text" value={this.state.ID}  onChange={this.handelID}/> <br /><br />
-
-                  性别:    <input type="radio" value="1" checked={this.state.sex==1}  onChange={this.handelSex}/>男 
-
-                            <input type="radio"  value="2" checked={this.state.sex==2}  onChange={this.handelSex}/>女 <br /><br /> 
-
-
-
-                 联系地址 :  
-
-                        <select value={this.state.city} onChange={this.handelCity}>
-                            {
-
-                                this.state.citys.map(function(value,key){
-
-                                    return <option key={key}>{value}</option>
-                                })
-                            }
-                            
-                        </select>
-
-
-                <br /><br />
-
-
-               服务方向:   
-                    {
-                        // 注意this指向 测试
-                        this.state.hobby.map((value,key)=>{
-
-                            return (
-
-                               <span key={key}>
-
-                                    <input type="checkbox"  checked={value.checked}  onChange={this.handelHobby.bind(this,key)}/> {value.title} 
-                               </span>
-                            )
-                        })
-                    }
-
-                    <br /><br />
-
-
-                  备注：<textarea vlaue={this.state.info}  onChange={this.handleInfo} />
-
-                  <br /><br />
-
-                 <input type="submit" align="center" Value=" 刚刚注册"/>
-                 
-                 {/* 同步测试 */}
-                 
 
                   <br /><br /> <br /><br />
 
 
-                </form>
+            
 
             </div>
-           </div>
-        );
+           </div> 
+            );
+      
+        
+      
     }
 }
 

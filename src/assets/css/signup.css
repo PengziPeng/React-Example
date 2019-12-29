@@ -1,0 +1,113 @@
+.div1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    width: 700px;
+}
+.div2{
+    position: fixed;
+    top: 50px;
+    margin: 30px 450px;
+}
+.div4{
+   font-size: xx-large;
+   font: bolder; 
+   position: fixed;
+    top: 200px;
+    left: 1000px;
+}
+.div3{
+    box-sizing: border-box;
+    font-size:1.4em;
+    height:2.7em;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    display:block;
+    outline:0;
+    padding:0 1em;
+    text-decoration:none;
+    width:100%;
+    position: fixed;
+    height: 50px;
+    width: 300px;
+    top: 350px;
+    left: 1100px;
+}
+.div5{
+    box-sizing: border-box;
+    font-size:1.4em;
+    height:2.7em;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    display:block;
+    outline:0;
+    padding:0 1em;
+    text-decoration:none;
+    width:100%;
+    position: fixed;
+    height: 50px;
+    width: 300px;
+    top: 450px;
+    left: 500px;
+    
+}
+.div6{
+    position: fixed;
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    top: 550px;
+    left: 400px;;
+}
+.div7{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 600px;
+    left: 1100px;
+}
+.div8{
+    width: 200px;
+    height: 20px;
+    position: fixed;
+    top: 520px;
+    left: 1140px;
+}
+.div9{
+    position: fixed;
+    top: 630px;
+    left: 900px;
+   
+}
+.div10{
+    position: fixed;
+    top: 480px;
+    left: 1480px;
+   
+}
+.div11{
+    border-color: transparent;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 100px;
+    top: 1000px;background-image: url(./../images/logo_i.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    background-size:100% 100%;
+}
+.div12{
+    position: absolute;
+    font-weight: bolder;
+    font-size: 40px;
+    left: 0px;
+    top: 1000px;
+
+}

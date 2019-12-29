@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import '..//assets/css/index.css'
+import '../assets/css/login.css';
 
+import {Link} from 'react-router-dom'
 
 
 class LoginForm extends Component {
@@ -9,75 +10,38 @@ class LoginForm extends Component {
 
 
     return(
-
-<div>
-        <div class="headerBar">
-            <div class="logoBar login_logo">
-<div class="comwidth">
-
-    <div class="logo f1">
-        <a href="#"><img src="" alt="跑腿网">  </img></a>
-    </div>
-    <h3 class="welcome_title">欢迎登陆</h3>
-</div>
-
+        <div>
+            <div class="div1">
+                <img>
+                </img>
+                <p class="div2">欢迎登陆</p>
             </div>
-
-        </div>
-        <div class="login_cont">
-
-            <ul class="login">
-                <li class="l_tit">  姓名</li>
-                <li class="mb_10"><imput type="text" class="login_input user_icon1" id="uname"></imput></li>
-                <li class="l_tit">密码</li>
-                <li class="mb_10"><imput type="password" class="login_input" id="upass"></imput></li>
-                <li><a href="#">忘记密码？</a></li>
-                <li class="autoLogin"><input type="checkbox" id="a1" class="checked"></input><label for="a1">自动登陆</label></li>
-                <li ><input type="button" value="" class="login_btn" onclick="ulogin()"></input></li>
-{/*                 
-<script language="javascript" type="text/javascript">
-    function ulogin() {
-        
-    } {
-
-    var userName = document.getElementById("uName0").value;
-
-    
-}
-
-
-
-
-</script> */}
-            </ul>
-            <div class="login_partners">
-
-                <p class="l_tit"> 使用合作方账号登陆网站</p>
-                <ul class="login_list clearfix">
-				<li><a href="#">QQ</a></li>
-				<li><span>|</span></li>
-				<li><a href="#">网易</a></li>
-				<li><span>|</span></li>
-				<li><a href="#">微信</a></li>
-				<li><span>|</span></li>
-				<li><a href="#">新浪微博</a></li>
-				<li><span>|</span></li>
-				<li><a href="#">腾讯微博</a></li>
-			</ul>
+            <div class="div4">
+                <table>
+                <div class="div5">
+            <table align="center" class="div6">
+                <tr>
+                    <td class="div13">邮箱/用户名/学号</td>
+                </tr>
+                    <input type="text" placeholder="请输入用户名" class="div7"></input>
+                    <input type="text" placeholder="请输入密码" class="div8"></input>
+                    
+                    
+                        <td class="div9">密码
+                    </td>
+                        <td class="div10">
+                            自动登录
+                        </td>
+                      <a href ="www.baidu.com" class="div11">忘记密码？</a>
+                    
+                    <input type="checkbox" class="div12"></input>
+                    <button class="div14">登录</button>
+                    <Link to='SignUp'><button class="div15">免费注册>></button></Link>
+            </table>
+            </div>
+            </table>
             </div>
         </div>
-        <a class="reg_link" href="注册.html"></a>
-        
-        <div class="hr_25"></div>
-        <div class="footer">
-            <p>  <a href="#">代拿简介</a>
-            <i>|</i>
-            
-            </p>
-        </div>
-
-</div>
-
     )
  }
 
